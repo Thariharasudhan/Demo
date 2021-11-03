@@ -4,7 +4,7 @@
     <div class="main">
         <form [formGroup]="form">
             <div class="input-group">
-                <label class="label">company Name</label>
+                <label class="label">Company Name</label>
                 <input type="text" class="input-text" formControlName="companyName" pInputText />
                 <div *ngIf="form.touched && form.controls['companyName'].invalid" class="error"> company Name is required</div>
             </div>
