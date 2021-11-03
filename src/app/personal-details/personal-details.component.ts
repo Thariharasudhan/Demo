@@ -15,7 +15,7 @@ export class PersonalDetailsComponent implements OnInit {
   countryOption: any[];
   disabled = false;
 
-  constructor(public fb: FormBuilder, private router: Router, private route: ActivatedRoute) {
+  constructor(public fb: FormBuilder, private router: Router) {
 
 
     this.form = this.fb.group({
@@ -70,8 +70,7 @@ export class PersonalDetailsComponent implements OnInit {
       setTimeout(() =>{
         return this.disabled = false;
       },3000);
-      console.log('personalDetails', personalDetails);
-      localStorage.setItem('PersonalDetails', JSON.stringify(personalDetails));
+      localStorage.setItem('Personal', JSON.stringify(personalDetails));
       this.router.navigate(['/company'], { queryParams: { personalVerify: 1} });
     }
 

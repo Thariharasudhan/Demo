@@ -14,14 +14,14 @@
                 <div *ngIf="form.touched && form.controls['Gender'].invalid" class="error"> Gender is required</div>
             </div>
             <div class="input-group">
-                <label class="label">country</label>
-                <p-dropdown [options]="countryOption" formControlName="country" [showClear]="true" placeholder="Select country" optionLabel="name"></p-dropdown>
-                <div *ngIf="form.touched && form.controls['country'].invalid" class="error">Please Select Country</div>
+                <label class="label">Country</label>
+                <p-dropdown [options]="countryOption" formControlName="country" [showClear]="true" placeholder="Select Country" optionLabel="name"></p-dropdown>
+                <div *ngIf="form.touched && form.controls['country'].invalid" class="error">Please select country</div>
             </div>
             <div class="input-group">
-                <label class="label">state</label>
-                <p-dropdown [options]="StateOption" formControlName="state" [showClear]="true" placeholder="Select state" optionLabel="name"></p-dropdown>
-                <div *ngIf="form.touched && form.controls['state'].invalid" class="error">Please Select State</div>
+                <label class="label">State</label>
+                <p-dropdown [options]="StateOption" formControlName="state" [showClear]="true" placeholder="Select State" optionLabel="name"></p-dropdown>
+                <div *ngIf="form.touched && form.controls['state'].invalid" class="error">Please select state</div>
             </div>
             <div class="input-group">
                 <label class="label">Phone</label>

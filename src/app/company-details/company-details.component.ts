@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CompanyDetailsComponent implements OnInit {
   form: FormGroup;
-  constructor( public fb: FormBuilder ,private router: Router, private route: ActivatedRoute) {
+  constructor( public fb: FormBuilder ,private router: Router) {
     this.form = this.fb.group({
       companyName: ['', [Validators.required] ],
       Emailid:['', [Validators.required]],
@@ -18,12 +18,7 @@ export class CompanyDetailsComponent implements OnInit {
     });
    }
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-        console.log(params);
-      }
-    );
-  }
+  ngOnInit(): void {}
 
 
   onSubmit(){
@@ -34,8 +29,7 @@ export class CompanyDetailsComponent implements OnInit {
       "Experience": this.form.controls['Experience'].value,
     }
     if(!this.form.invalid){
-      console.log('companyDetails',companyDetails);
-      localStorage.setItem('companyDetails', JSON.stringify(companyDetails));
+      localStorage.setItem('company', JSON.stringify(companyDetails));
       this.router.navigate(['/otp'],{ queryParams: { detailVerify: 2 } });
     }
   }
