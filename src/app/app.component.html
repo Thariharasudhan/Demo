@@ -1,0 +1,26 @@
+<div style="background-color: #2E4B64">
+    <div class="grid top-bar">
+        <div class="col-4 field">
+            <span class="col-1 " [ngClass]="personalVerify ? 'count' : 'checked'">
+              <i *ngIf="!personalVerify" class="fas fa-check"></i>
+              <span *ngIf="personalVerify" > 1 </span>
+            </span>
+            <span style="margin-left: 10px;"> personal Details</span>
+        </div>
+        <div class="col-4 field">
+            <span class="col-1" [ngClass]="detailVerify ? 'count' : 'checked'">
+                <i *ngIf="!detailVerify" class="fas fa-check"></i>
+                <span *ngIf="detailVerify" > 2 </span>
+            </span>
+            <span style="margin-left: 10px;"> Company Details</span>
+        </div>
+        <div class="col-4 field">
+            <span class="col-1" [ngClass]="otpVerify ? 'count' : 'checked'">
+                <i *ngIf="!otpVerify" class="fas fa-check"></i>
+                <span *ngIf="otpVerify" > 3 </span>
+            </span>
+            <span style="margin-left: 10px;">Email verification</span>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

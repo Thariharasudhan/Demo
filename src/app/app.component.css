@@ -1,0 +1,25 @@
+.top-bar {
+    margin: auto;
+    text-align: center;
+    height: 10% !important;
+    width: 78% !important;
+    margin-left: 21%;
+}
+
+.field {
+    padding: 1.5rem !important;
+    font-size: 18px;
+    color: white !important;
+}
+
+.count {
+    border-radius: 50%;
+    background-color: #ED5901;
+    padding: 0.6rem;
+}
+
+.checked {
+    border-radius: 50%;
+    background-color: #28435A;
+    padding: 0.6rem;
+}

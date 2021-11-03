@@ -1,0 +1,35 @@
+<div class="container">
+    <h3>Add Your Personal Details</h3>
+    <p style="margin-bottom: 35px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+    <div class="main">
+        <form [formGroup]="form">
+            <div class="input-group">
+                <label class="label">Full Name</label>
+                <input type="text" class="input-text" formControlName="fullName" pInputText (keypress)=" validation()" />
+                <div *ngIf="form.touched && form.controls['fullName'].invalid" class="error"> Full Name is required</div>
+            </div>
+            <div class="input-group">
+                <label class="label">Gender</label>
+                <p-selectButton [options]="GenderOptions" formControlName="Gender" optionLabel="name" optionValue="value"></p-selectButton>
+                <div *ngIf="form.touched && form.controls['Gender'].invalid" class="error"> Gender is required</div>
+            </div>
+            <div class="input-group">
+                <label class="label">country</label>
+                <p-dropdown [options]="countryOption" formControlName="country" [showClear]="true" placeholder="Select country" optionLabel="name"></p-dropdown>
+                <div *ngIf="form.touched && form.controls['country'].invalid" class="error">Please Select Country</div>
+            </div>
+            <div class="input-group">
+                <label class="label">state</label>
+                <p-dropdown [options]="StateOption" formControlName="state" [showClear]="true" placeholder="Select state" optionLabel="name"></p-dropdown>
+                <div *ngIf="form.touched && form.controls['state'].invalid" class="error">Please Select State</div>
+            </div>
+            <div class="input-group">
+                <label class="label">Phone</label>
+                <input type="number" class="input-text" maxlength="10" formControlName="Phone" (keypress)=" validation()" (keypress)="numberOnlyValidation($event)" pInputText />
+                <div *ngIf="form.touched && form.controls['Phone'].invalid" class="error"> phone Number is required</div>
+            </div>
+            <button type="submit" class="submit" (click)="onSubmit()" [ngClass]="disabled ? '' : 'disabled'" [disabled]="!disabled">Submit</button>
+
+        </form>
+    </div>
+</div>

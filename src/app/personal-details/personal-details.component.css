@@ -1,0 +1,64 @@
+.container {
+    margin: auto !important;
+    width: 40% !important;
+    text-align: center !important;
+}
+
+.main {
+    margin: auto !important;
+    width: 65% !important;
+}
+
+.input-group {
+    display: block;
+    margin-top: 6%;
+}
+
+.Gender-btn {
+    width: 100%;
+    background-color: #FDEEE6;
+    border: 1px solid #FDEEE6;
+    padding: 0.5rem;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+::ng-deep .p-buttonset .p-button:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+::ng-deep .p-buttonset .p-button:not(:last-child) {
+    border-right: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+::ng-deep .p-selectbutton .p-button.p-highlight:hover {
+    background: #FDEEE6;
+    border-color: #FDEEE6;
+    color: #ED5901;
+}
+
+::ng-deep .p-selectbutton .p-button:not(.p-disabled):not(.p-highlight):hover {
+    background: #FDEEE6;
+    border-color: #FDEEE6;
+    color: #ED5901;
+}
+
+::ng-deep .p-selectbutton .p-button.p-highlight {
+    background: #FDEEE6;
+    border-color: #ED5901;
+    color: #ED5901;
+    border: none;
+}
+
+::ng-deep .p-buttonset .p-button {
+    margin: 0;
+    border: none;
+}

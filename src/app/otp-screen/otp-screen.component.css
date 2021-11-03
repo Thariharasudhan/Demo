@@ -1,0 +1,24 @@
+.container {
+    margin: auto !important;
+    width: 40% !important;
+    text-align: center !important;
+}
+
+.main {
+    margin: auto !important;
+    width: 65% !important;
+}
+
+.input-group {
+    display: block;
+    margin-top: 5%;
+}
+
+.back {
+    width: 20%;
+    padding: 0.5rem;
+}
+
+.disabled {
+    opacity: 0.5;
+}
