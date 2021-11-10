@@ -18,12 +18,14 @@ import { NgOtpInputModule } from 'ng-otp-input';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {ToastModule} from 'primeng/toast';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     PersonalDetailsComponent,
     CompanyDetailsComponent,
-    OtpScreenComponent
+    OtpScreenComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
